@@ -1102,6 +1102,12 @@ padding: 5px;
     color: #74767b;
 }
 
+.video-bar {
+    background: #0e0e0e;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
 .photo-gallery .photo {
     width: calc(25% - 20px) ;
     margin: 0 5px 0px 0;
