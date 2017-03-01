@@ -1,0 +1,45 @@
+/* Start.our-work */
+.our-work {
+
+}
+
+.our-work h2 {
+color: #585858;
+padding: 20px 20px 10px 0;
+font-weight: normal;
+display: inline-block;
+margin-top: 100px;
+}
+
+
+.our-work li {
+display :inline-block;
+padding: 10px 19px;
+margin: 10px 4px 10px 0;
+border: 1px solid #aaaaaa;
+color: #868686;
+border-radius: 5px;
+}
+
+.our-work li:hover {
+border: 1px solid #dc0008;
+background-color: #dc0008;
+color: #fff;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.our-work li.active {
+border: 1px solid #dc0008;
+background-color: #dc0008;
+color: #fff;
+border-radius: 5px;
+}
+
+
+
+.mix {
+display: none;
+}
+
+/* End.our-work */
