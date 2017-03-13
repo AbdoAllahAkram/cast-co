@@ -96,19 +96,17 @@ body {
     color: #fff;
 }
 
-.navbar .counter {
-    background: #dc0008
-}
+
 .navbar .counter span,
 .navbar .counter p {
     display: inline-block;
-    color: #ffffff;
-    font-size: 20px
+    color: #fff;
+    font-size: 18px;
 }
 
 .navbar .counter p {
-    display: block;
-    margin: 10px 0 0
+    margin: 10px 0 10px 30px;
+    
 }
 
 .navbar {
@@ -118,6 +116,9 @@ body {
     background-color: #2f373f;
     z-index: 1;
     top:0;
+}
+.navbar .counter {
+    background: #cc020a;
 }
 
 .navbar .logo {
