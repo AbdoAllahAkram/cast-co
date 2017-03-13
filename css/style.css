@@ -97,14 +97,14 @@ body {
 }
 
 
-.navbar .counter span,
-.navbar .counter p {
+.counter span,
+.counter p {
     display: inline-block;
     color: #fff;
     font-size: 18px;
 }
 
-.navbar .counter p {
+ .counter p {
     margin: 10px 0 10px 30px;
     
 }
@@ -117,8 +117,9 @@ body {
     z-index: 1;
     top:0;
 }
-.navbar .counter {
+.counter {
     background: #cc020a;
+    margin-top: 54px;
 }
 
 .navbar .logo {
