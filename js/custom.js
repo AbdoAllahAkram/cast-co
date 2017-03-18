@@ -47,7 +47,7 @@ $(function () {
     if (myContact.height() < 640) {
         myContact.height($(window).height()+500);
     }
-    
+
     // Menu Bar In Small Screen
     var click = 0;
     
@@ -57,30 +57,17 @@ $(function () {
             $('.links').addClass('active-menu');
             $('.links').hide();
             $('.links').slideDown(400);
-           
-//            $('.links').addClass('active-menu').removeClass('hide');
-
             click ++;
         } 
         else {
 
             $('.links').slideUp(400);
             $('.links').addClass('active-menu');
-          //  $('.links').removeClass('active-menu');
             click --;
         }
         
     });
-    
-//    if (click > 0){
-//        $('.links').hide();
-//        click = 0;
-//    }
-  //  $('.links').addClass('active-menu');
-    
 
-   
-    
     // arrow of scroll up
 
     $(window).on("scroll", function () {
@@ -144,6 +131,7 @@ $(function () {
 
     });
     
+   
     /*--------- Down Counter ----------*/
     
     // Set the date we're counting down to
@@ -165,8 +153,10 @@ $(function () {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+        document.getElementById("demo-days").innerHTML =days;
+        document.getElementById("demo-hours").innerHTML =hours;
+        document.getElementById("demo-minutes").innerHTML =minutes;
+        document.getElementById("demo-seconds").innerHTML =seconds;
 
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -184,6 +174,7 @@ $(function () {
     $('.project li').click(function () {
         $(this).addClass('active').siblings().removeClass('active');	
     });
+    
     
     // Check Our-client 
         
