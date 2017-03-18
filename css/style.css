@@ -1153,7 +1153,6 @@ padding: 5px;
         font-weight: normal;
         font-size: 2.5em;
         margin: 4.5em 0 0;
-
     }
 
     .our-work p {
@@ -1230,6 +1229,19 @@ padding: 5px;
     background-color: rgba(3,3,3,.7);
     width: 100%;
     height: 100%;
+}
+
+.testimonial .item .person-img {
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.testimonial .item img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 
 .testimonial h1 {
