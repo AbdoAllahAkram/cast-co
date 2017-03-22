@@ -863,7 +863,7 @@ padding: 5px;
     line-height: 140px;
 }
 
-.features .box i:hover {
+.features .box:hover i {
     border: 1px solid #dc0008;
     border-radius: 50%;
     color: #fff;
