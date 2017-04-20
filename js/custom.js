@@ -11,6 +11,8 @@ $(function () {
         cursorwidth: '8px',
         cursorborderradius: '3px',
         cursorborder: '0',
+        scrollspeed: 60,
+        mousescrollstep: 40 
     });
     
     $("html").mouseover(function() {
