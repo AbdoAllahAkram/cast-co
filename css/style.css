@@ -324,7 +324,7 @@ body {
 /*  Start Header */
 
 .header {
-/*    background: url('../images/macbook-925614.jpg') no-repeat top center;*/
+    background: url('../images/macbook-925614.jpg') no-repeat top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
