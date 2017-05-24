@@ -1476,8 +1476,9 @@ padding: 5px;
 
 .our-team .the-team .person {
     float: left;
-    width: 25%;
+    width: 33.333333%;
     color: #9da1a5;
+    margin-left: auto;
 }
 
 .our-team .the-team .person img {
