@@ -1,73 +1,88 @@
 /*jshint -W117*/
 
 $(function () {
-    
+
     'use strict';
-    
+
     // Trigeer NiceScroll
-    
+
     $('html').niceScroll({
         cursorcolor: '#dc0008',
         cursorwidth: '8px',
         cursorborderradius: '3px',
         cursorborder: '0',
         scrollspeed: 60,
-        mousescrollstep: 40 
+        mousescrollstep: 40
     });
-    
-    $("html").mouseover(function() {
+
+    $("html").mouseover(function () {
         $("html").getNiceScroll().resize();
     });
-    
+
+
+    // change navbar opacity when scrolldown
+
+    $(window).scroll(function () {
+        var navbar = $('.navbar.main');
+
+        if ($(window).scrollTop() >= navbar.height()) {
+            navbar.addClass('nav-scrolled');
+        } else {
+            navbar.removeClass('nav-scrolled');
+            navbar.removeClass('main');
+        }
+    });
+
+
+
     //Change Header Height
-        
+
     var myHeader = $(".header");
 
     myHeader.height($(window).height());
-  
+
     if (myHeader.height() < 640) {
-        myHeader.height($(window).height()+300);
+        myHeader.height($(window).height() + 300);
     }
-    
+
     myHeader.width($(window).width());
 
     $(window).resize(function () {
         myHeader.height($(window).height());
         if (myHeader.height() < 640) {
-            myHeader.height($(window).height()+300);
+            myHeader.height($(window).height() + 300);
         }
 
         myHeader.width($(window).width());
     });
-    
+
     //Change Contact Page Height
-    
+
     var myContact = $(".contact");
 
     myContact.height($(window).height());
-    
+
     if (myContact.height() < 640) {
-        myContact.height($(window).height()+500);
+        myContact.height($(window).height() + 500);
     }
 
     // Menu Bar In Small Screen
     var click = 0;
-    
+
     $('.fa-bars').click(function () {
-        
+
         if (click == 0) {
             $('.links').addClass('active-menu');
             $('.links').hide();
             $('.links').slideDown(400);
-            click ++;
-        } 
-        else {
+            click++;
+        } else {
 
             $('.links').slideUp(400);
             $('.links').addClass('active-menu');
-            click --;
+            click--;
         }
-        
+
     });
 
     // arrow of scroll up
@@ -75,72 +90,71 @@ $(function () {
     $(window).on("scroll", function () {
         var scr = $(window).scrollTop();
 
-        if( scr >450) {
+        if (scr > 450) {
             $('.fa-chevron-up').fadeIn();
-        }
-        else {
+        } else {
             $('.fa-chevron-up').fadeOut();
         }
 
     });
-    
+
     //Make Smooth Scroll 
 
-    $('.fa-chevron-up').click (function () {
+    $('.fa-chevron-up').click(function () {
         $('html, body').animate({
 
-            scrollTop: 0 
-        } ,900);
+            scrollTop: 0
+        }, 900);
     });
 
-    $('.links a').click (function () {
+    $('.links a').click(function () {
         $('html, body').animate({
-            scrollTop: $('#' + $(this).data('value') ).offset().top - 20,
-        }, 900 );
+            scrollTop: $('#' + $(this).data('value')).offset().top - 20,
+        }, 900);
 
         console.log($(this).data('value'));
-    }); 
-    
+    });
+
     //Scroll To Features
-    
-    $('.links a').click (function () {
+
+    $('.links a').click(function () {
         $('html, body').animate({
-            scrollTop: $('#' + $(this).data('value') ).offset().top - 20,
-        }, 900 );
+            scrollTop: $('#' + $(this).data('value')).offset().top - 20,
+        }, 900);
 
         console.log($(this).data('value'));
     });
-    
+
     $('.header .arrow i').click(function () {
         $('html, body').animate({
-            scrollTop: $('.features').offset().top -110     
+            scrollTop: $('.features').offset().top - 110
         }, 700);
     });
-    
+
     $('.hire').click(function () {
-        
+
         $('html, body').animate({
-            scrollTop: $('.contact').offset().top     
+            scrollTop: $('.contact').offset().top
         }, 700);
-        
+
     });
-    
+
     $('.work-button').click(function () {
 
         $('html, body').animate({
-            scrollTop: $('.our-work').offset().top     
+            scrollTop: $('.our-work').offset().top
         }, 700);
 
     });
-    
-   
+
+
     /*--------- Down Counter ----------*/
-    
+
     // Set the date we're counting down to
     var countDownDate = new Date("april 5, 2017 15:37:25").getTime();
 
     // Update the count down every 1 second
-    var x = setInterval(function() {
+    var x = setInterval(function () {
 
         // Get todays date and time
         var now = new Date().getTime();
@@ -155,10 +169,10 @@ $(function () {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementById("demo-days").innerHTML =days;
-        document.getElementById("demo-hours").innerHTML =hours;
-        document.getElementById("demo-minutes").innerHTML =minutes;
-        document.getElementById("demo-seconds").innerHTML =seconds;
+        document.getElementById("demo-days").innerHTML = days;
+        document.getElementById("demo-hours").innerHTML = hours;
+        document.getElementById("demo-minutes").innerHTML = minutes;
+        document.getElementById("demo-seconds").innerHTML = seconds;
 
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -166,7 +180,7 @@ $(function () {
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 1000);
-    
+
     // Adjust MixItUp
 
     $('#Container').mixItUp();
@@ -174,23 +188,23 @@ $(function () {
     // Project Selector
 
     $('.project li').click(function () {
-        $(this).addClass('active').siblings().removeClass('active');	
+        $(this).addClass('active').siblings().removeClass('active');
     });
-    
-    
+
+
     // Check Our-client 
-        
+
     var leftArrow = $('.our-client .fa-angle-left'),
         rightArrow = $('.our-client .fa-angle-right');
-    
+
     function checkClients() {
         $('.client:first').hasClass('active') ? leftArrow.fadeOut() : leftArrow.fadeIn();
-        
+
         $('.client:last').hasClass('active') ? rightArrow.fadeOut() : rightArrow.fadeIn();
     }
-    
+
     checkClients();
-    
+
     $('.our-client i').click(function () {
         if ($(this).hasClass('fa-angle-right')) {
             $('.our-client .active').fadeOut(100, function () {
@@ -198,12 +212,13 @@ $(function () {
                 checkClients();
             });
         } else {
-            
+
             $('.our-client .active').fadeOut(100, function () {
                 $(this).removeClass('active').prev('.client').addClass('active').fadeIn();
                 checkClients();
             });
         }
     });
-    
+
+
 });
