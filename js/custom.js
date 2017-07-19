@@ -23,13 +23,12 @@ $(function () {
     // change navbar opacity when scrolldown
 
     $(window).scroll(function () {
-        var navbar = $('.navbar.main');
+        var navbar = $('.main-navbar');
 
         if ($(window).scrollTop() >= navbar.height()) {
-            navbar.addClass('nav-scrolled');
+            navbar.removeClass('main-navbar');
         } else {
-            navbar.removeClass('nav-scrolled');
-            navbar.removeClass('main');
+            navbar.addClass('main-navbar');
         }
     });
 
