@@ -366,7 +366,7 @@ body {
 .navbar {
     position: fixed;
     padding: 0;
-    background-color: rgba(47, 55, 63, 1);
+    background-color: rgba(47, 55, 63, .95);
     width: 100%;
     z-index: 1;
     top: 0;
