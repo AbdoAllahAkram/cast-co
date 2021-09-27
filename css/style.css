@@ -450,6 +450,8 @@ body {
     margin: 0px 7px;
 }
 .header .intro {
+    position: relative;
+    top: 30%;
     padding: 50px 0;
 }
 
